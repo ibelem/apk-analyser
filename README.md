@@ -1,16 +1,16 @@
-# apk-analyser
+# Apk Analyser
 Android APK Analyser especially for Crosswalk/Intel XDK Apps.
 
-# platform
+# Platform
 * Host OS: Linux Ubuntu
 
-# environment
+# Environment
 * Java JDK 1.5 or greater http://www.oracle.com/technetwork/java/javase/downloads/index.html
 * Python 2.7 https://www.python.org/download/
 * Android SDK installed http://developer.android.com
 * Install and set environment for apktool: https://code.google.com/p/android-apktool/wiki/Install
 
-# how to run
+# How to Run
 A.
   1. `cd <pathto>/apk-analyser`
   2. `Put Android apks into "apks" folder`
@@ -22,10 +22,10 @@ B.
   2.b. `python main.py -p <pathto>/<apk folder>`
 	
 C.
-  1.a. `python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk`
-  1.b. `python <pathto>/apk-analyser/main.py -p <pathto>/<apk folder>`
+  a. `python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk`
+  b. `python <pathto>/apk-analyser/main.py -p <pathto>/<apk folder>`
 	
-# review results
+# Review Results
 * Get results in `<pathto>/apk-analyser/result` folder.
 * If run the third method, please copy "`apk-analyser/result/apk-analyser-result.xsl`" to `<current dir>/result` folder.
 * Launch local `apk-analyser-result_<date>_<time>.xml` by Firefox or IE. For Google Chrome`[1]`, need to access `.xml` and `.xsl` via url on web server.
