@@ -18,12 +18,10 @@ A.
 
 B.
   1. `cd <pathto>/apk-analyser`
-  2.a. `python main.py -p <pathto>/xxx.apk`
-  2.b. `python main.py -p <pathto>/<apk folder>`
+  2. `python main.py -p <pathto>/xxx.apk` or `python main.py -p <pathto>/<apk folder>`
 	
 C.
-  a. `python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk`
-  b. `python <pathto>/apk-analyser/main.py -p <pathto>/<apk folder>`
+  1. `python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk` or `python <pathto>/apk-analyser/main.py -p <pathto>/<apk folder>`
 	
 # Review Results
 * Get results in `<pathto>/apk-analyser/result` folder.
