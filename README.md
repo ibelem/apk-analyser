@@ -15,20 +15,20 @@ environment:
 
 # how to run:
 ========================================================
-A:
+A:<br/>
 	1. cd <pathto>/apk-analyser<br/>
-	2. Put Android apks into "apks" folder
-	3. python main.py
+	2. Put Android apks into "apks" folder<br/>
+	3. python main.py<br/>
 
-B. 
-	1. cd <pathto>/apk-analyser
-	2. python main.py -p <pathto>/xxx.apk
+B. <br/>
+	1. cd <pathto>/apk-analyser<br/>
+	2. python main.py -p <pathto>/xxx.apk<br/>
 
-C. 
-	python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk
+C. <br/>
+	python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk<br/>
 
 # Review results:
 ========================================================
-Get results in &lt;current dir&gt;/result folder.
-If you run the third methods, please copy "apk-analyser/result/apk-analyser-result.xsl" to &lt;current dir&gt;/result folder.
+* Get results in &lt;current dir&gt;/result folder.<br/>
+* If you run the third methods, please copy "apk-analyser/result/apk-analyser-result.xsl" to &lt;current dir&gt;/result folder.
 
