@@ -16,7 +16,7 @@ environment:
 # how to run:
 ========================================================
 A:
-	1. cd <pathto>/apk-analyser
+	1. cd <pathto>/apk-analyser<br/>
 	2. Put Android apks into "apks" folder
 	3. python main.py
 
