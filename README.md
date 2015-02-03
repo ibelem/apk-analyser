@@ -11,19 +11,19 @@ Android APK Analyser especially for Crosswalk/Intel XDK Apps.
 * Install and set environment for apktool: https://code.google.com/p/android-apktool/wiki/Install
 
 # how to run
-  A.
+A.
   1. `cd <pathto>/apk-analyser`
   2. `Put Android apks into "apks" folder`
   3. `python main.py`
 
-  B.
-  `1. cd <pathto>/apk-analyser`
-  `2.a. python main.py -p <pathto>/xxx.apk`
-  `2.b. python main.py -p <pathto>/<apk folder>`
+B.
+  1. `cd <pathto>/apk-analyser`
+  2.a. `python main.py -p <pathto>/xxx.apk`
+  2.b. `python main.py -p <pathto>/<apk folder>`
 	
-  C.
-  `1.a. python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk`
-  `1.b. python <pathto>/apk-analyser/main.py -p <pathto>/<apk folder>`
+C.
+  1.a. `python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk`
+  1.b. `python <pathto>/apk-analyser/main.py -p <pathto>/<apk folder>`
 	
 # review results
 * Get results in `<pathto>/apk-analyser/result` folder.
