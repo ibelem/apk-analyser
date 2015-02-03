@@ -18,11 +18,13 @@ A:<br/>
 
 B. <br/>
 	`1. cd <pathto>/apk-analyser`<br/>
-	`2. python main.py -p <pathto>/xxx.apk`<br/>
-
+	`2.a. python main.py -p <pathto>/xxx.apk`<br/>
+	`2.b. python main.py -p <pathto>/<apk folder>`<br/>
+	
 C. <br/>
-	`python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk`<br/>
-
+	`1.a. python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk`<br/>
+	`1.b. python <pathto>/apk-analyser/main.py -p <pathto>/<apk folder>`<br/>
+	
 # review results
 * Get results in `<pathto>/apk-analyser/result` folder.<br/>
 * If run the third method, please copy "`apk-analyser/result/apk-analyser-result.xsl`" to `<current dir>/result` folder.
