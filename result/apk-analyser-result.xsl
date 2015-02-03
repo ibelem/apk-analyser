@@ -18,7 +18,7 @@
       header { font-family: 'Lucida Bright', Verdana, cursive; font-size: 30px; margin: 14px 0px 20px 0px; padding-bottom: 10px; border-bottom: 4px rgba(22, 160, 133,1.0) solid;}
       footer  { border: 0px solid #eee; padding: 10px 0px; margin-botton: 10px; text-align: right; }
       table { width: 100%; text-align: center; border-collapse:collapse; font-size: 12px; }
-      th, td { border-bottom: 1px solid #eee; padding: 1px 0px; overflow: hidden;}
+      th, td { border-bottom: 1px solid #eee; padding: 3px 0px; overflow: hidden;}
       tr:hover { background-color: #fafafa; cursor: pointer;} 
       .details:hover { background-color: rgba(22, 160, 133, 0.01); }
       td.details, .smali, .asset { text-align: left; margin: 10px 0px ; }
@@ -179,7 +179,8 @@
       </xsl:for-each>
 
       </table>
-      <div id="datetime">Test Date: <xsl:value-of select="apks/@datetime"/></div>
+      <div id="datetime">
+      	Click each row to get more details. Test Date: <xsl:value-of select="apks/@datetime"/></div>
       <footer>
         2015 OTC Web QA Team
       </footer>
