@@ -11,6 +11,10 @@ def _find(pathname, matchFunc=os.path.isfile):
         if matchFunc(candidate):
             return candidate
 
+def mk_dir(path):
+    if not find_dir(path):
+        os.mkdir(path)
+
 def find_file(pathname):
     return _find(pathname)
 
