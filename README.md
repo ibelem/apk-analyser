@@ -11,25 +11,24 @@ Android APK Analyser especially for Crosswalk/Intel XDK Apps.
 * Install and set environment for apktool: https://code.google.com/p/android-apktool/wiki/Install
 
 # how to run
-A:<br/>
-	`1. cd <pathto>/apk-analyser`<br/>
-	`2. Put Android apks into "apks" folder`<br/>
-	`3. python main.py`<br/>
+  A.
+  1. `cd <pathto>/apk-analyser`
+  2. `Put Android apks into "apks" folder`
+  3. `python main.py`
 
-B. <br/>
-	`1. cd <pathto>/apk-analyser`<br/>
-	`2.a. python main.py -p <pathto>/xxx.apk`<br/>
-	`2.b. python main.py -p <pathto>/<apk folder>`<br/>
+  B.
+  `1. cd <pathto>/apk-analyser`
+  `2.a. python main.py -p <pathto>/xxx.apk`
+  `2.b. python main.py -p <pathto>/<apk folder>`
 	
-C. <br/>
-	`1.a. python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk`<br/>
-	`1.b. python <pathto>/apk-analyser/main.py -p <pathto>/<apk folder>`<br/>
+  C.
+  `1.a. python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk`
+  `1.b. python <pathto>/apk-analyser/main.py -p <pathto>/<apk folder>`
 	
 # review results
-* Get results in `<pathto>/apk-analyser/result` folder.<br/>
+* Get results in `<pathto>/apk-analyser/result` folder.
 * If run the third method, please copy "`apk-analyser/result/apk-analyser-result.xsl`" to `<current dir>/result` folder.
 * Launch local `apk-analyser-result_<date>_<time>.xml` by Firefox or IE. For Google Chrome`[1]`, need to access `.xml` and `.xsl` via url on web server.
-
 
 `[1]` Google Chrome is unable to perform an xsl transform on a local xml file due to a security concern that blocking XML files from accessing local XSLT files in the same directory.
 
