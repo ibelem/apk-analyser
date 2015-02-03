@@ -25,6 +25,6 @@ C. <br/>
 	python &lt;pathto&gt;/apk-analyser/main.py -p <pathto>/xxx.apk<br/>
 
 # Review results
-* Get results in &lt;current dir&gt;/result folder.<br/>
-* If you run the third methods, please copy "apk-analyser/result/apk-analyser-result.xsl" to &lt;current dir&gt;/result folder.
+* Get results in &lt;pathto&gt;/apk-analyser/result folder.<br/>
+* If run the third method, please copy "apk-analyser/result/apk-analyser-result.xsl" to &lt;current dir&gt;/result folder.
 
