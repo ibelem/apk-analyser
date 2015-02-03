@@ -16,10 +16,12 @@ Environment:
 # How to run:
 ========================================================
 A:
-1. cd apk-analyser
-2. Put Android apks into "apks" folder
-3. python main.py
+	1. cd apk-analyser
+	2. Put Android apks into "apks" folder
+	3. python main.py
 
 B. python main.py -p /home/belem/github/apk_tmp/embeddingapi.apk
 
 C. python github/apk-analyser/main.py -p /home/belem/github/apk_tmp/embeddingapi.apk
+
+Get results in <current dir>/result folder.
