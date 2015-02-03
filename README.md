@@ -2,8 +2,7 @@
 Android APK Analyser especially for Crosswalk/Intel XDK Apps.
 
 # platform
-* Host OS: Linux 
-* Bugs on Windows, will not fix them until there are users need it. 
+* Host OS: Linux Ubuntu
 
 # environment
 * Java JDK 1.5 or greater http://www.oracle.com/technetwork/java/javase/downloads/index.html
