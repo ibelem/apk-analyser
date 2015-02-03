@@ -24,4 +24,4 @@ B. python main.py -p /home/belem/github/apk_tmp/embeddingapi.apk
 
 C. python github/apk-analyser/main.py -p /home/belem/github/apk_tmp/embeddingapi.apk
 
-Get results in <current dir>/result folder.
+Get results in &lt;current dir&gt;/result folder.
