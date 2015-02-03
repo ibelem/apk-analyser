@@ -23,7 +23,7 @@ B. <br/>
 C. <br/>
 	`python <pathto>/apk-analyser/main.py -p <pathto>/xxx.apk`<br/>
 
-# Review results
+# review results
 * Get results in `<pathto>/apk-analyser/result` folder.<br/>
 * If run the third method, please copy "`apk-analyser/result/apk-analyser-result.xsl`" to `<current dir>/result` folder.
 * Launch local `apk-analyser-result_<date>_<time>.xml` by Firefox or IE. For Google Chrome`[1]`, need to put `.xml` and `.xsl` to a web server to access.
