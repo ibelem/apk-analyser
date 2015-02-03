@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# https://bitbucket.org/iBotPeaches/apktool/downloads
-# Install and set apktool: https://code.google.com/p/android-apktool/wiki/Install
-
 import os, sys
 from datetime import *
 from lxml import etree as et
