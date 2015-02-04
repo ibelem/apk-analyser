@@ -4,7 +4,7 @@
 # https://bitbucket.org/iBotPeaches/apktool/downloads
 # Install and set apktool: https://code.google.com/p/android-apktool/wiki/Install
 
-import os, sys, platform
+import os, sys
 import shutil
 import subprocess
 from optparse import OptionParser
@@ -65,7 +65,6 @@ def aaptanalyser(path):
         r = subprocess.check_output(aaptlist, shell=True)
 
         if r.find('lib/armeabi-v7a/libxwalkcore.so') >-1 and r.find('lib/x86/libxwalkcore.so') >-1:
-            print 'arm + x86'
             architecture = 'arm + x86'
         elif r.find('lib/armeabi-v7a/libxwalkcore.so') >-1:
             print 'arm'
@@ -114,7 +113,6 @@ def apktoolanalyser(path):
                 mode = 'shared'
 
             if comm.find_file(xwalkcoreviewsmali):
-                #print 'crosswalk app'
                 #print 'xwalk/core'
                 crosswalk = 'yes'
                 if comm.find_dir(xwalkappruntime):
@@ -124,17 +122,14 @@ def apktoolanalyser(path):
                     #print 'xwalk/core/internal'
                     coreinternal = 'yes'
             elif comm.find_dir(xwalkcoreinternal):
-                #print 'RuntimeLib.apk'
                 note = 'Namespace org.xwalk.core.internal included.'
             else:
                 note = 'Not a crosswalk based app.'
 
             if comm.find_dir(apachecordova):
-                #print 'org/apache/cordova'
                 cordova = 'yes'
 
             if comm.find_dir(intelxdk) or comm.find_file(intelxdkjs):
-                #print 'com/intel/xdk or intelxdk.js'
                 isintelxdk = 'yes'
 
             smalipath = os.path.join(apkdedecompiled, 'smali')
@@ -143,7 +138,6 @@ def apktoolanalyser(path):
 
                 if dirname.replace(smalipath + '/', '').count('/') == 2:
                     smalilist.append(dirname.replace(smalipath + '/', ''))
-            #print smalilist
 
             assetpath = os.path.join(apkdedecompiled, 'assets')
 
@@ -154,7 +148,6 @@ def apktoolanalyser(path):
                             and not f.endswith('.otf') and not f.endswith('.wav') \
                             and not f.endswith('.svg') and not f.endswith('.ttf'):
                         assetlist.append(f)
-            #print assetlist
 
         else:
             print 'Decompile failed: ' + apkname
@@ -195,19 +188,14 @@ def analyser(path):
     smalilist = k[7]
     assetlist = k[8]
 
-    systemuser = platform.platform()
-    filename = ''
-    if systemuser == 'Windows':
-        filename = path.split('\\')[-1]
-    else:
-        filename = path.split('/')[-1]
+    filename = path.split('\\')[-1].split('/')[-1]
 
     xml.insert_xml_result(xmlpath, filename, apksize(path), appname, packagename,
                           launchableactivity, versioncode, versionname, sdkversion, targetsdkversion,
                           mode, architecture,
                           crosswalk, appruntime, coreinternal, cordova, isintelxdk, smalilist, assetlist, note)
     print 'Completed: ' + path
-    print '__________________________________________________________________'
+    print '__________________________________________'
 
 def run(path):
     if path.lower().endswith('.apk'):

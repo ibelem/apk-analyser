@@ -15,22 +15,23 @@
     <style type="text/css">
       html { margin: 0px 20px; }
       body { color: #515151; font: 80%/1.5 Verdana,sans-serif; min-width: 960px; margin: 0px auto; text-shadow: 0px 1px 0px rgba(0,0,0,0.1); }
-      header { font-family: 'Lucida Bright', Verdana, cursive; font-size: 30px; margin: 14px 0px 20px 0px; padding-bottom: 10px; border-bottom: 4px rgba(22, 160, 133,1.0) solid;}
+      header { font-family: 'Lucida Bright', Verdana, cursive; font-size: 30px; margin: 14px 0px 14px 0px; padding-bottom: 10px; border-bottom: 4px rgba(22, 160, 133,1.0) solid;}
       footer  { border: 0px solid #eee; padding: 10px 0px; margin-botton: 10px; text-align: right; }
       table { width: 100%; text-align: center; border-collapse:collapse; font-size: 12px; }
       th, td { border-bottom: 1px solid #eee; padding: 3px 0px; overflow: hidden;}
       tr:hover { background-color: #fafafa; cursor: pointer;} 
-      .details:hover { background-color: rgba(22, 160, 133, 0.01); }
-      td.details, .smali, .asset { text-align: left; margin: 10px 0px ; }
-      .smali span { display:inline-block; margin: 2px 4px; border: 1px dotted #919191; padding: 1px 6px; border-radius: 0px; background-color: #f6f6f6; }
-      span.cap1, .smali span:hover { border: 1px solid rgba(142, 68, 173,1.0); background-color: rgba(142, 68, 173,1.0); color: rgba(255, 255, 255, 1.0); }
-      .asset span { display:inline-block; margin: 2px 4px; border: 1px dotted #919191; padding: 1px 6px; border-radius: 10px; background-color: #f6f6f6; }
-      span.cap2, .asset span:hover { border: 1px solid rgba(211, 84, 0,1.0); background-color: rgba(211, 84, 0,1.0); color: rgba(255, 255, 255, 1.0); }
-      .det { margin: 0px 10px 0px 0px; font-weight: bold; color: rgba(22, 160, 133,1.0); text-shadow: 0px 1px 1px rgba(0,0,0,0.1); font-size: 13px; }
-      .apd { text-align: center; color: #a0a0a0; }
+      td.details { background-color: rgba(32, 50, 68,1.0); color: rgba(255, 255, 255, 0.6);}
+      td.details:hover { background-color: rgba(20, 38, 56,1.0);  }
+      td.details, .smali, .asset { text-align: left; margin: 20px 0px ; }
+      span.cap1, .smali span { display:inline-block; margin: 2px 4px; border: 1px dotted rgba(255, 255, 255, 0.6); padding: 1px 6px; border-radius: 0px; rgba(255, 255, 255, 0.9); }
+      span.cap1, .smali span:hover { border: 1px solid rgba(255, 255, 255, 1.0); background-color: rgba(142, 68, 173,1.0); color: rgba(255, 255, 255, 1.0);  }
+      span.cap2, .asset span { display:inline-block; margin: 2px 4px; border: 1px dotted rgba(255, 255, 255, 0.6); padding: 1px 6px; border-radius: 10px; rgba(255, 255, 255, 0.9); }
+      span.cap2, .asset span:hover { border: 1px solid rgba(255, 255, 255, 1.0); background-color: rgba(211, 84, 0,1.0); color: rgba(255, 255, 255, 1.0); }
+      .det { margin: 0px 10px 0px 0px; font-weight: bold; text-shadow: 0px 1px 1px rgba(0,0,0,0.1); font-size: 13px; color: rgba(255, 255, 255, 1.0); }
+      .apd { text-align: center;  margin-top: 10px; }
       .details { padding: 10px; font-size:11px; }
       .fill {background-color: #46C8C8; color: rgba(255, 255, 255, 1.0); }
-      .lim { min-width: 80px; max-width: 160px; overflow: hidden; }
+      .lim { min-width: 100px; max-width: 200px; overflow: hidden; }
       .limname { max-width: 120px; overflow: hidden;  }
       .limsize { min-width: 62px; max-width: 80px; overflow: hidden;  }
       .limw { min-width: 60px; max-width: 106px; overflow: hidden; width: 106px;  }
@@ -38,18 +39,21 @@
       .sha { background-color:#EB7E7F; color: rgba(255, 255, 255, 1.0); }
       .arm { background-color:#EC795E; color: rgba(255, 255, 255, 1.0);}
       .armx86 { background-color:#E082A5; color: rgba(255, 255, 255, 1.0);}
-      .x86 { background-color:#FFFED8; color: rgba(0, 0, 0, 0.6); }
+      .x86 { background-color:#FFBE65; color: rgba(0, 0, 0, 0.6); }
       .rt { background-color:#0ACDC7; color: rgba(255, 255, 255, 1.0); }
       .cdo { background-color:#A7D773; color: rgba(255, 255, 255, 1.0); }
       .ci { background-color:#FF885E; color: rgba(255, 255, 255, 1.0); }
       .xdk { background-color:#D18EE2; color: rgba(255, 255, 255, 1.0); }
       #datetime { font-size: 10px; margin-top: 10px; }
+      #toggle { text-align: right; color: rgba(22, 160, 133,1.0); cursor: hand; margin: -6px 0px 6px 0px;  }
+      #toggle:hover { color: rgba(16, 154, 127,1.0); }
     </style>
     <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
   </head>
   <body>
     <div id='wrapper'>
       <header>Crosswalk APK Analysed Result</header>
+      <div id='toggle'>expand all</div>
       <table class="reports">
         <tr>
           <th class="lim">APK</th>
@@ -193,7 +197,14 @@
           $(element).find("tr:first-child").show();
           $(element).find("tr.odd").click(function(){
             $(this).next("tr").slideToggle();
-          });  
+          });
+          $("#toggle").click(function(){
+            $(element).find("tr:not(.odd)").toggle();
+            if($("#toggle").html() == "expand all")
+            	$("#toggle").text("collapse all");
+            else
+            	$("#toggle").text("expand all");
+          });
         }); 
     </script>
   </body>

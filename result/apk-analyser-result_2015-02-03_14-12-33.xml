@@ -332,24 +332,6 @@
     <asset>radiomartini.ogg</asset>
     <asset>brickbreak.ogg</asset>
   </apk>
-  <apk id="com.test.crashcheck">
-    <crosswalk iscrosswalk="yes" mode="embedded" architecture="arm" appruntime="yes" coreinternal="yes" cordova="" intelxdk="" note=""/>
-    <app name="test_no_crash" file="mismatch_check_arm.apk" size="17.5MB" launchableactivity="com.test.crashcheck.CrashcheckActivity" versioncode="20000000" versionname="1.0.0" sdkversion="14" targetsdkversion="19"/>
-    <smali>com/google/common</smali>
-    <smali>com/test/crashcheck</smali>
-    <smali>com/googlecode/eyesfree</smali>
-    <smali>javax/annotation/meta</smali>
-    <smali>javax/annotation/concurrent</smali>
-    <smali>org/xwalk/app</smali>
-    <smali>org/xwalk/core</smali>
-    <smali>org/chromium/content</smali>
-    <smali>org/chromium/net</smali>
-    <smali>org/chromium/content_public</smali>
-    <smali>org/chromium/ui</smali>
-    <smali>org/chromium/media</smali>
-    <smali>org/chromium/components</smali>
-    <smali>org/chromium/base</smali>
-  </apk>
   <apk id="org.xwalk.runtime.client.embedded.shell">
     <crosswalk iscrosswalk="yes" mode="embedded" architecture="arm" appruntime="yes" coreinternal="yes" cordova="" intelxdk="" note=""/>
     <app name="XWalkRuntimeClientEmbeddedShell" file="XWalkRuntimeClientEmbeddedShell.apk" size="18.9MB" launchableactivity="org.xwalk.runtime.client.embedded.shell.XWalkRuntimeClientEmbeddedShellActivity" versioncode="1" versionname="Developer Build" sdkversion="14" targetsdkversion="21"/>
@@ -576,20 +558,6 @@
     <asset>icudtl.dat</asset>
     <asset>xwalk.pak</asset>
     <asset>index.html</asset>
-  </apk>
-  <apk id="org.xwalk.runtime.client.embedded.test">
-    <crosswalk iscrosswalk="" mode="" architecture="" appruntime="" coreinternal="" cordova="" intelxdk="" note="Not a crosswalk based app."/>
-    <app name="" file="XWalkRuntimeClientEmbeddedTest.apk" size="0.0MB" launchableactivity="" versioncode="1" versionname="Developer Build" sdkversion="14" targetsdkversion="21"/>
-    <smali>org/xwalk/runtime</smali>
-    <asset>device_capabilities.html</asset>
-    <asset>displayAvailableTest.html</asset>
-    <asset>contacts.html</asset>
-    <asset>echo.html</asset>
-    <asset>screen_orientation.html</asset>
-    <asset>timer.html</asset>
-    <asset>messaging_mini.html</asset>
-    <asset>native_file_system.html</asset>
-    <asset>echoSync.html</asset>
   </apk>
   <apk id="net.itx.paychex">
     <crosswalk iscrosswalk="yes" mode="embedded" architecture="arm" appruntime="" coreinternal="yes" cordova="yes" intelxdk="" note=""/>
@@ -1446,47 +1414,6 @@
     <asset>index.css</asset>
     <asset>index.js</asset>
   </apk>
-  <apk id="org.xwalk.embedding.test.v4">
-    <crosswalk iscrosswalk="yes" mode="embedded" architecture="x86" appruntime="" coreinternal="yes" cordova="" intelxdk="" note=""/>
-    <app name="EmbeddingApiTestUnit" file="embeddingapi.apk" size="21.8MB" launchableactivity="org.xwalk.embedding.MainActivity" versioncode="1" versionname="1.0" sdkversion="8" targetsdkversion="21"/>
-    <smali>com/test/server</smali>
-    <smali>com/googlecode/eyesfree</smali>
-    <smali>javax/annotation/meta</smali>
-    <smali>javax/annotation/concurrent</smali>
-    <smali>org/xwalk/core</smali>
-    <smali>org/xwalk/embedding</smali>
-    <smali>org/chromium/device</smali>
-    <smali>org/chromium/content</smali>
-    <smali>org/chromium/net</smali>
-    <smali>org/chromium/content_public</smali>
-    <smali>org/chromium/mojo</smali>
-    <smali>org/chromium/ui</smali>
-    <smali>org/chromium/media</smali>
-    <smali>org/chromium/components</smali>
-    <smali>org/chromium/base</smali>
-    <asset>testXHR.html</asset>
-    <asset>request_focus_left_frame.html</asset>
-    <asset>request_focus_main.html</asset>
-    <asset>file_chooser.html</asset>
-    <asset>index.html</asset>
-    <asset>window_create_open.html</asset>
-    <asset>manifest.json</asset>
-    <asset>framesEcho.html</asset>
-    <asset>fullscreen_enter_exit.html</asset>
-    <asset>fullscreen_togged.html</asset>
-    <asset>pause_timers.html</asset>
-    <asset>xhr.xml</asset>
-    <asset>add_js_interface.html</asset>
-    <asset>window.close.html</asset>
-    <asset>echo.html</asset>
-    <asset>request_focus_right_frame1.html</asset>
-    <asset>scale_changed.html</asset>
-    <asset>window_icon.html</asset>
-    <asset>index.xhtml</asset>
-    <asset>request_focus_right_frame.html</asset>
-    <asset>p1bar.html</asset>
-    <asset>echoSync.html</asset>
-  </apk>
   <apk id="com.example.hello">
     <crosswalk iscrosswalk="" mode="" architecture="" appruntime="" coreinternal="" cordova="yes" intelxdk="" note="Not a crosswalk based app."/>
     <app name="upstreamdova" file="cordova_upstream-debug-unaligned.apk" size="1.9MB" launchableactivity="com.example.hello.CordovaApp" versioncode="1" versionname="0.0.1" sdkversion="10" targetsdkversion="19"/>
@@ -2050,31 +1977,6 @@
     <asset>boss.mp3</asset>
     <asset>alternate_ui.mp3</asset>
   </apk>
-  <apk id="org.xwalk.core.xwview.test">
-    <crosswalk iscrosswalk="" mode="" architecture="" appruntime="" coreinternal="" cordova="" intelxdk="" note="Not a crosswalk based app."/>
-    <app name="" file="XWalkCoreTest.apk" size="0.1MB" launchableactivity="" versioncode="1" versionname="Developer Build" sdkversion="14" targetsdkversion="21"/>
-    <smali>org/xwalk/core</smali>
-    <smali>org/chromium/content</smali>
-    <smali>org/chromium/net</smali>
-    <smali>org/chromium/base</smali>
-    <asset>file_chooser.html</asset>
-    <asset>index.html</asset>
-    <asset>framesEcho.html</asset>
-    <asset>fullscreen_enter_exit.html</asset>
-    <asset>new_window.html</asset>
-    <asset>fullscreen_togged.html</asset>
-    <asset>add_js_interface.html</asset>
-    <asset>profile.html</asset>
-    <asset>console_message.html</asset>
-    <asset>window.close.html</asset>
-    <asset>echo.html</asset>
-    <asset>create_window_2.html</asset>
-    <asset>favicon.html</asset>
-    <asset>scale_changed.html</asset>
-    <asset>create_window_1.html</asset>
-    <asset>js_modal_dialog.html</asset>
-    <asset>echoSync.html</asset>
-  </apk>
   <apk id="com.ape.webapp.pizzachef">
     <crosswalk iscrosswalk="yes" mode="embedded" architecture="arm" appruntime="" coreinternal="" cordova="" intelxdk="" note=""/>
     <app name="Pizza Chef" file="com.ape.webapp.pizzachef_2.0.apk" size="21.8MB" launchableactivity="com.ape.webapp.pizzachef.GreatDecider" versioncode="4" versionname="2.0" sdkversion="10" targetsdkversion="19"/>
@@ -2134,23 +2036,5 @@
     <asset>index.html</asset>
     <asset>index2.html</asset>
     <asset>manifest.json</asset>
-  </apk>
-  <apk id="org.xwalk.core.internal.xwview.test">
-    <crosswalk iscrosswalk="" mode="" architecture="" appruntime="" coreinternal="" cordova="" intelxdk="" note="Namespace org.xwalk.core.internal included."/>
-    <app name="" file="XWalkCoreInternalTest.apk" size="0.1MB" launchableactivity="" versioncode="1" versionname="Developer Build" sdkversion="14" targetsdkversion="21"/>
-    <smali>org/xwalk/core</smali>
-    <smali>org/chromium/content</smali>
-    <smali>org/chromium/net</smali>
-    <smali>org/chromium/base</smali>
-    <asset>index.html</asset>
-    <asset>notification.html</asset>
-    <asset>framesEcho.html</asset>
-    <asset>renderHung.html</asset>
-    <asset>geolocation.html</asset>
-    <asset>echo.html</asset>
-    <asset>full_screen_video_test.html</asset>
-    <asset>broadcast.html</asset>
-    <asset>navigator.online.html</asset>
-    <asset>echoSync.html</asset>
   </apk>
 </apks>
