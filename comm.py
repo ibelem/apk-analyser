@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 
+# Author: belem
+
 import os, sys
 import re, codecs
 import shutil, glob
@@ -23,3 +25,4 @@ def find_dir(path):
 
 def find_glob_path(filepath):
     return glob.glob(filepath)
+

@@ -1,5 +1,5 @@
 # Apk Analyser
-Android APK Analyser especially for Crosswalk/Intel XDK Apps.
+Android APK Analyser especially for Crosswalk apps.
 
 # Platform
 * Host OS: Linux Ubuntu
@@ -9,6 +9,7 @@ Android APK Analyser especially for Crosswalk/Intel XDK Apps.
 * Python 2.7 https://www.python.org/download/
 * Android SDK installed http://developer.android.com
 * Install and set environment for apktool: https://code.google.com/p/android-apktool/wiki/Install
+* Update the jQuery path in result/apk-analyser-result.xsl in case you didn't clone the whole crosswalk-test-suite: `<script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>`
 
 # How to Run
 A.
@@ -29,4 +30,3 @@ C.
 * Launch local `apk-analyser-result_<date>_<time>.xml` by Firefox or IE. For Google Chrome`[1]`, need to access `.xml` and `.xsl` via url on web server.
 
 `[1]` Google Chrome is unable to perform an xsl transform on a local xml file due to a security concern that blocking XML files from accessing local XSLT files in the same directory.
-
