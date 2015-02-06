@@ -1,60 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet type="text/xsl" href="apk-analyser-result.xsl"?>
-<apks datetime="2015-02-05 15:11:24">
-  <apk id="org.xwalk.runtime.client.shell">
-    <crosswalk iscrosswalk="yes" mode="shared" architecture="" webview="" chromium="yes" coreinternal="" cordova="" intelxdk="" note=""/>
-    <app name="XWalkRuntimeClientShell" file="XWalkRuntimeClientShell.apk" size="0.4MB" launchableactivity="org.xwalk.runtime.client.shell.XWalkRuntimeClientShellActivity" versioncode="1" versionname="Developer Build" sdkversion="14" targetsdkversion="21"/>
-    <xwalk>org/xwalk</xwalk>
-    <xwalk>org/xwalk/app</xwalk>
-    <xwalk>org/xwalk/app/runtime</xwalk>
-    <xwalk>org/xwalk/app/runtime/extension</xwalk>
-    <xwalk>org/xwalk/core</xwalk>
-    <xwalk>org/xwalk/runtime</xwalk>
-    <xwalk>org/xwalk/runtime/client</xwalk>
-    <xwalk>org/xwalk/runtime/client/shell</xwalk>
-    <xwalk>org/xwalk/test</xwalk>
-    <xwalk>org/xwalk/test/util</xwalk>
-    <chromium>org/chromium/device</chromium>
-    <chromium>org/chromium/device/battery</chromium>
-    <chromium>org/chromium/content</chromium>
-    <chromium>org/chromium/content/app</chromium>
-    <chromium>org/chromium/content/browser</chromium>
-    <chromium>org/chromium/content/common</chromium>
-    <chromium>org/chromium/net</chromium>
-    <chromium>org/chromium/net/test</chromium>
-    <chromium>org/chromium/content_public</chromium>
-    <chromium>org/chromium/content_public/browser</chromium>
-    <chromium>org/chromium/content_public/common</chromium>
-    <chromium>org/chromium/mojo</chromium>
-    <chromium>org/chromium/mojo/bindings</chromium>
-    <chromium>org/chromium/mojo/system</chromium>
-    <chromium>org/chromium/ui</chromium>
-    <chromium>org/chromium/ui/picker</chromium>
-    <chromium>org/chromium/ui/widget</chromium>
-    <chromium>org/chromium/ui/gfx</chromium>
-    <chromium>org/chromium/ui/autofill</chromium>
-    <chromium>org/chromium/ui/interpolators</chromium>
-    <chromium>org/chromium/ui/gl</chromium>
-    <chromium>org/chromium/ui/base</chromium>
-    <chromium>org/chromium/media</chromium>
-    <chromium>org/chromium/base</chromium>
-    <chromium>org/chromium/base/library_loader</chromium>
-    <chromium>org/chromium/base/test</chromium>
-    <smali>com/example/extension</smali>
-    <smali>com/googlecode/eyesfree</smali>
-    <smali>javax/annotation/meta</smali>
-    <smali>javax/annotation/concurrent</smali>
-    <asset>index.html</asset>
-    <asset>manifest.json</asset>
-    <asset>extensions-config.json</asset>
-    <asset>manifest_without_xwalk_hosts.json</asset>
-    <asset>csp.html</asset>
-    <asset>manifest_xwalk_hosts.json</asset>
-    <asset>manifest_self.json</asset>
-    <asset>manifest_inline_script.json</asset>
-    <asset>cross_origin.html</asset>
-    <asset>myextension.js</asset>
-  </apk>
+<apks datetime="2015-02-06 13:23:05">
   <apk id="org.xwalk.app.hello.world">
     <crosswalk iscrosswalk="yes" mode="shared" architecture="" webview="" chromium="yes" coreinternal="" cordova="" intelxdk="" note=""/>
     <app name="XWalkAppHelloWorld" file="XWalkAppHelloWorld.apk" size="0.1MB" launchableactivity="org.xwalk.app.hello.world.HelloWorldActivity" versioncode="5495002" versionname="12.40.295.0" sdkversion="14" targetsdkversion="21"/>
@@ -70,6 +16,62 @@
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <asset>index.html</asset>
+  </apk>
+  <apk id="org.stemkoski.koalaquest">
+    <crosswalk iscrosswalk="yes" mode="embedded" architecture="arm" webview="" chromium="yes" coreinternal="" cordova="yes" intelxdk="yes" note=""/>
+    <app name="Koalas Quest" file="org.stemkoski.koalaquest_1.03.apk" size="23.3MB" launchableactivity="org.stemkoski.koalaquest.KoalasQuest" versioncode="20010" versionname="1.03" sdkversion="14" targetsdkversion="19"/>
+    <xwalk>org/xwalk</xwalk>
+    <xwalk>org/xwalk/core</xwalk>
+    <xwalk>org/xwalk/core/client</xwalk>
+    <xwalk>org/xwalk/core/extensions</xwalk>
+    <xwalk>org/xwalk/runtime</xwalk>
+    <xwalk>org/xwalk/runtime/extension</xwalk>
+    <xwalk>org/xwalk/runtime/extension/api</xwalk>
+    <xwalk>org/xwalk/runtime/extension/api/presentation</xwalk>
+    <xwalk>org/xwalk/runtime/extension/api/contacts</xwalk>
+    <xwalk>org/xwalk/runtime/extension/api/screenorientation</xwalk>
+    <xwalk>org/xwalk/runtime/extension/api/messaging</xwalk>
+    <xwalk>org/xwalk/runtime/extension/api/device_capabilities</xwalk>
+    <chromium>org/chromium/content</chromium>
+    <chromium>org/chromium/content/app</chromium>
+    <chromium>org/chromium/content/browser</chromium>
+    <chromium>org/chromium/content/common</chromium>
+    <chromium>org/chromium/net</chromium>
+    <chromium>org/chromium/ui</chromium>
+    <chromium>org/chromium/ui/gfx</chromium>
+    <chromium>org/chromium/ui/autofill</chromium>
+    <chromium>org/chromium/media</chromium>
+    <chromium>org/chromium/components</chromium>
+    <chromium>org/chromium/components/navigation_interception</chromium>
+    <chromium>org/chromium/components/web_contents_delegate_android</chromium>
+    <chromium>org/chromium/base</chromium>
+    <cordova>org/apache/cordova</cordova>
+    <cordova>org/apache/cordova/splashscreen</cordova>
+    <cordova>org/apache/cordova/batterystatus</cordova>
+    <smali>com/google/common</smali>
+    <smali>com/google/common/annotations</smali>
+    <smali>com/google/common/base</smali>
+    <smali>com/squareup/okhttp</smali>
+    <smali>com/squareup/okhttp/internal</smali>
+    <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
+    <smali>javax/annotation/meta</smali>
+    <smali>javax/annotation/concurrent</smali>
+    <smali>org/stemkoski/koalaquest</smali>
+    <asset>xwalk.pak</asset>
+    <asset>device_capabilities_api.js</asset>
+    <asset>screen_orientation_api.js</asset>
+    <asset>presentation_api.js</asset>
+    <asset>xhr.js</asset>
+    <asset>c2runtime.js</asset>
+    <asset>index.html</asset>
+    <asset>cordova.js</asset>
+    <asset>intelxdk.js</asset>
+    <asset>jquery-2.0.0.min.js</asset>
+    <asset>cordova_plugins.js</asset>
+    <asset>battery.js</asset>
+    <asset>splashscreen.js</asset>
+    <asset>intelxdkstub.js</asset>
   </apk>
   <apk id="com.test.crashcheck">
     <crosswalk iscrosswalk="yes" mode="embedded" architecture="arm" webview="" chromium="yes" coreinternal="yes" cordova="" intelxdk="" note=""/>
@@ -108,84 +110,13 @@
     <chromium>org/chromium/base</chromium>
     <chromium>org/chromium/base/library_loader</chromium>
     <smali>com/google/common</smali>
+    <smali>com/google/common/annotations</smali>
+    <smali>com/google/common/base</smali>
     <smali>com/test/crashcheck</smali>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
-  </apk>
-  <apk id="org.xwalk.runtime.client.embedded.shell">
-    <crosswalk iscrosswalk="yes" mode="embedded" architecture="arm" webview="" chromium="yes" coreinternal="yes" cordova="" intelxdk="" note=""/>
-    <app name="XWalkRuntimeClientEmbeddedShell" file="XWalkRuntimeClientEmbeddedShell.apk" size="18.9MB" launchableactivity="org.xwalk.runtime.client.embedded.shell.XWalkRuntimeClientEmbeddedShellActivity" versioncode="1" versionname="Developer Build" sdkversion="14" targetsdkversion="21"/>
-    <xwalk>org/xwalk</xwalk>
-    <xwalk>org/xwalk/app</xwalk>
-    <xwalk>org/xwalk/app/runtime</xwalk>
-    <xwalk>org/xwalk/app/runtime/extension</xwalk>
-    <xwalk>org/xwalk/core</xwalk>
-    <xwalk>org/xwalk/core/internal</xwalk>
-    <xwalk>org/xwalk/core/internal/extension</xwalk>
-    <xwalk>org/xwalk/core/internal/extension/api</xwalk>
-    <xwalk>org/xwalk/core/internal/extension/api/presentation</xwalk>
-    <xwalk>org/xwalk/core/internal/extension/api/contacts</xwalk>
-    <xwalk>org/xwalk/core/internal/extension/api/launchscreen</xwalk>
-    <xwalk>org/xwalk/core/internal/extension/api/messaging</xwalk>
-    <xwalk>org/xwalk/core/internal/extension/api/device_capabilities</xwalk>
-    <xwalk>org/xwalk/core/internal/extensions</xwalk>
-    <xwalk>org/xwalk/runtime</xwalk>
-    <xwalk>org/xwalk/runtime/client</xwalk>
-    <xwalk>org/xwalk/runtime/client/embedded</xwalk>
-    <xwalk>org/xwalk/runtime/client/embedded/shell</xwalk>
-    <xwalk>org/xwalk/test</xwalk>
-    <xwalk>org/xwalk/test/util</xwalk>
-    <chromium>org/chromium/device</chromium>
-    <chromium>org/chromium/device/battery</chromium>
-    <chromium>org/chromium/content</chromium>
-    <chromium>org/chromium/content/app</chromium>
-    <chromium>org/chromium/content/browser</chromium>
-    <chromium>org/chromium/content/common</chromium>
-    <chromium>org/chromium/net</chromium>
-    <chromium>org/chromium/net/test</chromium>
-    <chromium>org/chromium/content_public</chromium>
-    <chromium>org/chromium/content_public/browser</chromium>
-    <chromium>org/chromium/content_public/common</chromium>
-    <chromium>org/chromium/mojo</chromium>
-    <chromium>org/chromium/mojo/bindings</chromium>
-    <chromium>org/chromium/mojo/system</chromium>
-    <chromium>org/chromium/ui</chromium>
-    <chromium>org/chromium/ui/picker</chromium>
-    <chromium>org/chromium/ui/widget</chromium>
-    <chromium>org/chromium/ui/gfx</chromium>
-    <chromium>org/chromium/ui/autofill</chromium>
-    <chromium>org/chromium/ui/interpolators</chromium>
-    <chromium>org/chromium/ui/gl</chromium>
-    <chromium>org/chromium/ui/base</chromium>
-    <chromium>org/chromium/media</chromium>
-    <chromium>org/chromium/components</chromium>
-    <chromium>org/chromium/components/navigation_interception</chromium>
-    <chromium>org/chromium/components/web_contents_delegate_android</chromium>
-    <chromium>org/chromium/base</chromium>
-    <chromium>org/chromium/base/library_loader</chromium>
-    <chromium>org/chromium/base/test</chromium>
-    <smali>com/example/extension</smali>
-    <smali>com/googlecode/eyesfree</smali>
-    <smali>javax/annotation/meta</smali>
-    <smali>javax/annotation/concurrent</smali>
-    <asset>index.html</asset>
-    <asset>manifest.json</asset>
-    <asset>extensions-config.json</asset>
-    <asset>icudtl.dat</asset>
-    <asset>xwalk.pak</asset>
-    <asset>messaging_api.js</asset>
-    <asset>launch_screen_api.js</asset>
-    <asset>device_capabilities_api.js</asset>
-    <asset>contacts_api.js</asset>
-    <asset>presentation_api.js</asset>
-    <asset>manifest_without_xwalk_hosts.json</asset>
-    <asset>csp.html</asset>
-    <asset>manifest_xwalk_hosts.json</asset>
-    <asset>manifest_self.json</asset>
-    <asset>manifest_inline_script.json</asset>
-    <asset>cross_origin.html</asset>
-    <asset>myextension.js</asset>
   </apk>
   <apk id="org.xwalk.test">
     <crosswalk iscrosswalk="yes" mode="shared" architecture="" webview="" chromium="" coreinternal="" cordova="" intelxdk="" note=""/>
@@ -202,7 +133,7 @@
     <asset>manifest.json</asset>
   </apk>
   <apk id="com.oupeng.browser">
-    <crosswalk iscrosswalk="" mode="" architecture="" webview="yes" chromium="" coreinternal="" cordova="" intelxdk="" note="Not a crosswalk based app."/>
+    <crosswalk iscrosswalk="" mode="" architecture="" webview="yes webkit" chromium="" coreinternal="" cordova="" intelxdk="" note="Not a Crosswalk based app."/>
     <app name="欧朋浏览器" file="oupeng10.2.3.88208.apk" size="6.2MB" launchableactivity="com.opera.android.OperaStartActivity" versioncode="50" versionname="10.2.3.88208" sdkversion="9" targetsdkversion="19"/>
     <smali>android/a/e</smali>
     <smali>android/a/a</smali>
@@ -210,38 +141,177 @@
     <smali>android/a/g</smali>
     <smali>android/a/c</smali>
     <smali>android/a/b</smali>
+    <smali>android/a/b/a</smali>
     <smali>android/a/f</smali>
     <smali>android/support/v4</smali>
+    <smali>android/support/v4/view</smali>
+    <smali>android/support/v4/database</smali>
+    <smali>android/support/v4/text</smali>
+    <smali>android/support/v4/content</smali>
+    <smali>android/support/v4/app</smali>
+    <smali>android/support/v4/net</smali>
+    <smali>android/support/v4/util</smali>
+    <smali>android/support/v4/widget</smali>
+    <smali>android/support/v4/accessibilityservice</smali>
+    <smali>android/support/v4/internal</smali>
+    <smali>android/support/v4/os</smali>
+    <smali>android/support/v4/print</smali>
+    <smali>android/support/v4/hardware</smali>
+    <smali>android/support/v4/media</smali>
+    <smali>android/support/v4/graphics</smali>
+    <smali>android/webkit</smali>
     <smali>a/a/a</smali>
+    <smali>a/a/a/a</smali>
     <smali>a/a/b</smali>
+    <smali>a/a/b/a</smali>
+    <smali>a/a/b/b</smali>
     <smali>com/mobeta/android</smali>
+    <smali>com/mobeta/android/dslv</smali>
     <smali>com/android/camera</smali>
+    <smali>com/android/camera/a</smali>
     <smali>com/e/a</smali>
     <smali>com/e/c</smali>
+    <smali>com/e/c/a</smali>
     <smali>com/e/b</smali>
     <smali>com/tencent/mm</smali>
+    <smali>com/tencent/mm/a</smali>
+    <smali>com/tencent/mm/sdk</smali>
     <smali>com/a/a</smali>
     <smali>com/d/a</smali>
+    <smali>com/d/a/a</smali>
     <smali>com/g/a</smali>
     <smali>com/alipay/android</smali>
+    <smali>com/alipay/android/app</smali>
     <smali>com/sina/weibo</smali>
+    <smali>com/sina/weibo/sdk</smali>
     <smali>com/sina/a</smali>
     <smali>com/c/a</smali>
+    <smali>com/c/a/a</smali>
     <smali>com/etao/kakalib</smali>
+    <smali>com/etao/kakalib/e</smali>
+    <smali>com/etao/kakalib/a</smali>
+    <smali>com/etao/kakalib/d</smali>
+    <smali>com/etao/kakalib/views</smali>
+    <smali>com/etao/kakalib/posterscanning</smali>
+    <smali>com/etao/kakalib/c</smali>
+    <smali>com/etao/kakalib/express</smali>
+    <smali>com/etao/kakalib/b</smali>
     <smali>com/etao/kaka</smali>
+    <smali>com/etao/kaka/a</smali>
+    <smali>com/etao/kaka/decode</smali>
     <smali>com/umeng/a</smali>
+    <smali>com/umeng/a/a</smali>
     <smali>com/umeng/common</smali>
+    <smali>com/umeng/common/a</smali>
+    <smali>com/umeng/common/net</smali>
+    <smali>com/umeng/common/util</smali>
     <smali>com/umeng/fb</smali>
+    <smali>com/umeng/fb/a</smali>
+    <smali>com/umeng/fb/c</smali>
+    <smali>com/umeng/fb/model</smali>
+    <smali>com/umeng/fb/b</smali>
     <smali>com/umeng/analytics</smali>
+    <smali>com/umeng/analytics/social</smali>
+    <smali>com/umeng/analytics/e</smali>
+    <smali>com/umeng/analytics/a</smali>
+    <smali>com/umeng/analytics/d</smali>
+    <smali>com/umeng/analytics/onlineconfig</smali>
+    <smali>com/umeng/analytics/c</smali>
+    <smali>com/umeng/analytics/b</smali>
     <smali>com/opera/android</smali>
+    <smali>com/opera/android/h</smali>
+    <smali>com/opera/android/savedpages</smali>
+    <smali>com/opera/android/light</smali>
+    <smali>com/opera/android/crashhandler</smali>
+    <smali>com/opera/android/r</smali>
+    <smali>com/opera/android/s</smali>
+    <smali>com/opera/android/e</smali>
+    <smali>com/opera/android/w</smali>
+    <smali>com/opera/android/oupengapi</smali>
+    <smali>com/opera/android/op</smali>
+    <smali>com/opera/android/splash</smali>
+    <smali>com/opera/android/a</smali>
+    <smali>com/opera/android/u</smali>
+    <smali>com/opera/android/d</smali>
+    <smali>com/opera/android/actionbar</smali>
+    <smali>com/opera/android/n</smali>
+    <smali>com/opera/android/g</smali>
+    <smali>com/opera/android/control_center</smali>
+    <smali>com/opera/android/search</smali>
+    <smali>com/opera/android/k</smali>
+    <smali>com/opera/android/onekeyshare</smali>
+    <smali>com/opera/android/nightmode</smali>
+    <smali>com/opera/android/browser</smali>
+    <smali>com/opera/android/i</smali>
+    <smali>com/opera/android/y</smali>
+    <smali>com/opera/android/v</smali>
+    <smali>com/opera/android/o</smali>
+    <smali>com/opera/android/c</smali>
+    <smali>com/opera/android/invitation</smali>
+    <smali>com/opera/android/custom_views</smali>
+    <smali>com/opera/android/bookmarkhistory</smali>
+    <smali>com/opera/android/settings</smali>
+    <smali>com/opera/android/q</smali>
+    <smali>com/opera/android/l</smali>
+    <smali>com/opera/android/speeddialfarm</smali>
+    <smali>com/opera/android/m</smali>
+    <smali>com/opera/android/marketing</smali>
+    <smali>com/opera/android/tip</smali>
+    <smali>com/opera/android/leftscreen</smali>
+    <smali>com/opera/android/barcode</smali>
+    <smali>com/opera/android/oupengsync</smali>
+    <smali>com/opera/android/bspatch</smali>
+    <smali>com/opera/android/feedback</smali>
+    <smali>com/opera/android/theme</smali>
+    <smali>com/opera/android/mop</smali>
+    <smali>com/opera/android/downloads</smali>
+    <smali>com/opera/android/turbo</smali>
+    <smali>com/opera/android/favorites</smali>
+    <smali>com/opera/android/t</smali>
+    <smali>com/opera/android/pushsdk</smali>
+    <smali>com/opera/android/x</smali>
+    <smali>com/opera/android/ongoing</smali>
+    <smali>com/opera/android/lzma_sdk</smali>
+    <smali>com/opera/android/j</smali>
+    <smali>com/opera/android/usercenter</smali>
+    <smali>com/opera/android/z</smali>
+    <smali>com/opera/android/ime</smali>
+    <smali>com/opera/android/legacy_bookmarks</smali>
+    <smali>com/opera/android/p</smali>
+    <smali>com/opera/android/plugin</smali>
+    <smali>com/opera/android/b</smali>
+    <smali>com/opera/android/utilities</smali>
+    <smali>com/opera/android/startpage</smali>
+    <smali>com/opera/android/history</smali>
+    <smali>com/opera/android/cnm</smali>
+    <smali>com/opera/android/bookmarks</smali>
+    <smali>com/opera/android/f</smali>
+    <smali>com/opera/android/pushednotification</smali>
+    <smali>com/opera/android/compressionstats</smali>
     <smali>com/opera/a</smali>
     <smali>com/opera/base</smali>
     <smali>com/b/a</smali>
+    <smali>com/b/a/a</smali>
+    <smali>com/b/a/d</smali>
+    <smali>com/b/a/c</smali>
+    <smali>com/b/a/b</smali>
     <smali>com/b/b</smali>
+    <smali>com/b/b/a</smali>
     <smali>com/f/a</smali>
+    <smali>com/f/a/a</smali>
+    <smali>com/f/a/d</smali>
+    <smali>com/f/a/c</smali>
+    <smali>com/f/a/b</smali>
     <smali>com/f/c</smali>
+    <smali>com/f/c/a</smali>
     <smali>com/f/b</smali>
+    <smali>com/f/b/e</smali>
+    <smali>com/f/b/a</smali>
+    <smali>com/f/b/d</smali>
+    <smali>com/f/b/c</smali>
+    <smali>com/f/b/b</smali>
     <smali>de/greenrobot/event</smali>
+    <smali>de/greenrobot/event/util</smali>
     <asset>oupeng.properties</asset>
     <asset>a</asset>
     <asset>TopUrls.zip</asset>
@@ -316,41 +386,104 @@
     <chromium>org/chromium/base</chromium>
     <chromium>org/chromium/base/library_loader</chromium>
     <smali>android/support/v4</smali>
+    <smali>android/support/v4/view</smali>
+    <smali>android/support/v4/database</smali>
+    <smali>android/support/v4/content</smali>
+    <smali>android/support/v4/app</smali>
+    <smali>android/support/v4/util</smali>
+    <smali>android/support/v4/widget</smali>
+    <smali>android/support/v4/accessibilityservice</smali>
+    <smali>android/support/v4/os</smali>
     <smali>cn/liao189/ynote</smali>
+    <smali>cn/liao189/ynote/helper</smali>
     <smali>com/tencent/weibo</smali>
+    <smali>com/tencent/weibo/sdk</smali>
     <smali>com/tencent/a</smali>
+    <smali>com/tencent/a/a</smali>
+    <smali>com/tencent/a/b</smali>
     <smali>com/tencent/connect</smali>
+    <smali>com/tencent/connect/auth</smali>
+    <smali>com/tencent/connect/a</smali>
+    <smali>com/tencent/connect/avatar</smali>
+    <smali>com/tencent/connect/common</smali>
+    <smali>com/tencent/connect/dataprovider</smali>
+    <smali>com/tencent/connect/share</smali>
     <smali>com/tencent/open</smali>
+    <smali>com/tencent/open/a</smali>
+    <smali>com/tencent/open/b</smali>
     <smali>com/tencent/stat</smali>
+    <smali>com/tencent/stat/common</smali>
+    <smali>com/tencent/stat/event</smali>
     <smali>com/tencent/weiyun</smali>
     <smali>com/tencent/tauth</smali>
     <smali>com/tencent/mm</smali>
+    <smali>com/tencent/mm/algorithm</smali>
+    <smali>com/tencent/mm/sdk</smali>
+    <smali>com/tencent/mm/platformtools</smali>
     <smali>com/tencent/utils</smali>
     <smali>com/tencent/wpa</smali>
     <smali>com/tencent/t</smali>
     <smali>com/tencent/b</smali>
+    <smali>com/tencent/b/a</smali>
+    <smali>com/tencent/b/c</smali>
+    <smali>com/tencent/b/b</smali>
     <smali>com/tencent/qzone</smali>
     <smali>com/google/common</smali>
+    <smali>com/google/common/annotations</smali>
+    <smali>com/google/common/base</smali>
     <smali>com/sina/weibo</smali>
+    <smali>com/sina/weibo/sdk</smali>
     <smali>com/sina/sso</smali>
     <smali>com/actionbarsherlock/view</smali>
     <smali>com/actionbarsherlock/app</smali>
     <smali>com/actionbarsherlock/widget</smali>
     <smali>com/actionbarsherlock/internal</smali>
+    <smali>com/actionbarsherlock/internal/view</smali>
+    <smali>com/actionbarsherlock/internal/app</smali>
+    <smali>com/actionbarsherlock/internal/widget</smali>
+    <smali>com/actionbarsherlock/internal/nineoldandroids</smali>
     <smali>com/youdao/note</smali>
+    <smali>com/youdao/note/task</smali>
+    <smali>com/youdao/note/openapi</smali>
+    <smali>com/youdao/note/yxapi</smali>
+    <smali>com/youdao/note/broadcast</smali>
+    <smali>com/youdao/note/export</smali>
+    <smali>com/youdao/note/service</smali>
+    <smali>com/youdao/note/appdownload</smali>
+    <smali>com/youdao/note/wxapi</smali>
+    <smali>com/youdao/note/fragment</smali>
+    <smali>com/youdao/note/data</smali>
+    <smali>com/youdao/note/sdk</smali>
+    <smali>com/youdao/note/datasource</smali>
+    <smali>com/youdao/note/utils</smali>
+    <smali>com/youdao/note/theme</smali>
+    <smali>com/youdao/note/ui</smali>
+    <smali>com/youdao/note/provider</smali>
+    <smali>com/youdao/note/tool</smali>
+    <smali>com/youdao/note/activity2</smali>
+    <smali>com/youdao/note/exceptions</smali>
     <smali>com/crashlytics/android</smali>
+    <smali>com/crashlytics/android/internal</smali>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>com/netease/mobidroid</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <smali>org/opencv/core</smali>
     <smali>org/opencv/utils</smali>
     <smali>org/apache/tools</smali>
+    <smali>org/apache/tools/zip</smali>
     <smali>org/apache/http</smali>
+    <smali>org/apache/http/entity</smali>
     <smali>org/apache/commons</smali>
+    <smali>org/apache/commons/httpclient</smali>
     <smali>org/ccil/cowan</smali>
+    <smali>org/ccil/cowan/tagsoup</smali>
     <smali>im/yixin/algorithm</smali>
     <smali>im/yixin/sdk</smali>
+    <smali>im/yixin/sdk/util</smali>
+    <smali>im/yixin/sdk/channel</smali>
+    <smali>im/yixin/sdk/api</smali>
     <asset>detail.js</asset>
     <asset>editor2.js</asset>
     <asset>android_editor_extra.js</asset>
@@ -377,7 +510,7 @@
     <asset>android-readMod.css</asset>
   </apk>
   <apk id="org.xwalk.core.internal.xwview.shell">
-    <crosswalk iscrosswalk="" mode="embedded" architecture="arm" webview="" chromium="yes" coreinternal="" cordova="" intelxdk="" note="Namespace org.xwalk.core.internal included."/>
+    <crosswalk iscrosswalk="" mode="embedded" architecture="arm" webview="" chromium="yes" coreinternal="yes" cordova="" intelxdk="" note="Not a Crosswalk based app."/>
     <app name="XWalkCoreInternalShell" file="XWalkCoreInternalShell.apk" size="19.2MB" launchableactivity="org.xwalk.core.internal.xwview.shell.XWalkViewInternalShellActivity" versioncode="1" versionname="Developer Build" sdkversion="14" targetsdkversion="21"/>
     <xwalk>org/xwalk</xwalk>
     <xwalk>org/xwalk/core</xwalk>
@@ -422,31 +555,32 @@
     <chromium>org/chromium/base/library_loader</chromium>
     <smali>android/support/annotation</smali>
     <smali>android/support/v13</smali>
+    <smali>android/support/v13/app</smali>
     <smali>android/support/v4</smali>
+    <smali>android/support/v4/view</smali>
+    <smali>android/support/v4/database</smali>
+    <smali>android/support/v4/text</smali>
+    <smali>android/support/v4/content</smali>
+    <smali>android/support/v4/app</smali>
+    <smali>android/support/v4/net</smali>
+    <smali>android/support/v4/util</smali>
+    <smali>android/support/v4/widget</smali>
+    <smali>android/support/v4/accessibilityservice</smali>
+    <smali>android/support/v4/internal</smali>
+    <smali>android/support/v4/os</smali>
+    <smali>android/support/v4/print</smali>
+    <smali>android/support/v4/hardware</smali>
+    <smali>android/support/v4/media</smali>
+    <smali>android/support/v4/provider</smali>
+    <smali>android/support/v4/speech</smali>
+    <smali>android/support/v4/graphics</smali>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <asset>icudtl.dat</asset>
     <asset>xwalk.pak</asset>
     <asset>index.html</asset>
-  </apk>
-  <apk id="org.xwalk.runtime.client.embedded.test">
-    <crosswalk iscrosswalk="" mode="" architecture="" webview="" chromium="" coreinternal="" cordova="" intelxdk="" note="Not a crosswalk based app."/>
-    <app name="" file="XWalkRuntimeClientEmbeddedTest.apk" size="0.0MB" launchableactivity="" versioncode="1" versionname="Developer Build" sdkversion="14" targetsdkversion="21"/>
-    <xwalk>org/xwalk</xwalk>
-    <xwalk>org/xwalk/runtime</xwalk>
-    <xwalk>org/xwalk/runtime/client</xwalk>
-    <xwalk>org/xwalk/runtime/client/embedded</xwalk>
-    <xwalk>org/xwalk/runtime/client/embedded/test</xwalk>
-    <asset>device_capabilities.html</asset>
-    <asset>displayAvailableTest.html</asset>
-    <asset>contacts.html</asset>
-    <asset>echo.html</asset>
-    <asset>screen_orientation.html</asset>
-    <asset>timer.html</asset>
-    <asset>messaging_mini.html</asset>
-    <asset>native_file_system.html</asset>
-    <asset>echoSync.html</asset>
   </apk>
   <apk id="org.xwalk.demoexpress">
     <crosswalk iscrosswalk="yes" mode="embedded" architecture="arm" webview="" chromium="yes" coreinternal="yes" cordova="yes" intelxdk="" note=""/>
@@ -508,7 +642,9 @@
     <cordova>org/apache/cordova/camera</cordova>
     <cordova>org/apache/cordova/media</cordova>
     <smali>com/squareup/okhttp</smali>
+    <smali>com/squareup/okhttp/internal</smali>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <asset>VERSION</asset>
@@ -899,7 +1035,7 @@
     <asset>bootstrap.min.js</asset>
   </apk>
   <apk id="org.xwalk.core">
-    <crosswalk iscrosswalk="" mode="embedded" architecture="arm" webview="" chromium="yes" coreinternal="" cordova="" intelxdk="" note="Namespace org.xwalk.core.internal included."/>
+    <crosswalk iscrosswalk="" mode="embedded" architecture="arm" webview="" chromium="yes" coreinternal="yes" cordova="" intelxdk="" note="Not a Crosswalk based app."/>
     <app name="XWalkCoreLibrary" file="XWalkRuntimeLib.apk" size="18.9MB" launchableactivity="" versioncode="5495002" versionname="12.40.295.0" sdkversion="14" targetsdkversion="21"/>
     <xwalk>org/xwalk</xwalk>
     <xwalk>org/xwalk/core</xwalk>
@@ -940,6 +1076,7 @@
     <chromium>org/chromium/base</chromium>
     <chromium>org/chromium/base/library_loader</chromium>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <asset>icudtl.dat</asset>
@@ -996,8 +1133,27 @@
     <chromium>org/chromium/base/library_loader</chromium>
     <smali>android/support/annotation</smali>
     <smali>android/support/v13</smali>
+    <smali>android/support/v13/app</smali>
     <smali>android/support/v4</smali>
+    <smali>android/support/v4/view</smali>
+    <smali>android/support/v4/database</smali>
+    <smali>android/support/v4/text</smali>
+    <smali>android/support/v4/content</smali>
+    <smali>android/support/v4/app</smali>
+    <smali>android/support/v4/net</smali>
+    <smali>android/support/v4/util</smali>
+    <smali>android/support/v4/widget</smali>
+    <smali>android/support/v4/accessibilityservice</smali>
+    <smali>android/support/v4/internal</smali>
+    <smali>android/support/v4/os</smali>
+    <smali>android/support/v4/print</smali>
+    <smali>android/support/v4/hardware</smali>
+    <smali>android/support/v4/media</smali>
+    <smali>android/support/v4/provider</smali>
+    <smali>android/support/v4/speech</smali>
+    <smali>android/support/v4/graphics</smali>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <asset>icudtl.dat</asset>
@@ -1059,6 +1215,7 @@
     <chromium>org/chromium/base</chromium>
     <chromium>org/chromium/base/library_loader</chromium>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <asset>dropdown.html</asset>
@@ -1111,6 +1268,7 @@
     <chromium>org/chromium/base</chromium>
     <chromium>org/chromium/base/library_loader</chromium>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <asset>index.html</asset>
@@ -1166,7 +1324,9 @@
     <cordova>org/apache/cordova</cordova>
     <smali>com/crosswalk/VCO</smali>
     <smali>com/squareup/okhttp</smali>
+    <smali>com/squareup/okhttp/internal</smali>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <asset>master.css</asset>
@@ -1177,7 +1337,7 @@
     <asset>index.js</asset>
   </apk>
   <apk id="com.oupeng.xbrowser.plus">
-    <crosswalk iscrosswalk="" mode="" architecture="" webview="yes" chromium="yes" coreinternal="" cordova="" intelxdk="" note="Not a crosswalk based app."/>
+    <crosswalk iscrosswalk="" mode="" architecture="" webview="yes" chromium="yes" coreinternal="" cordova="" intelxdk="" note="Not a Crosswalk based app."/>
     <app name="欧朋X+" file="oupengx-plus-daily-8883420-150203-.apk" size="18.5MB" launchableactivity="com.opera.android.OperaStartActivity" versioncode="50" versionname="2.1.0.88834" sdkversion="14" targetsdkversion="19"/>
     <chromium>org/chromium/content</chromium>
     <chromium>org/chromium/content/app</chromium>
@@ -1195,14 +1355,57 @@
     <chromium>org/chromium/base</chromium>
     <chromium>org/chromium/base/library_loader</chromium>
     <smali>android/support/v4</smali>
+    <smali>android/support/v4/view</smali>
+    <smali>android/support/v4/content</smali>
+    <smali>android/support/v4/app</smali>
+    <smali>android/support/v4/widget</smali>
     <smali>com/mobeta/android</smali>
+    <smali>com/mobeta/android/dslv</smali>
     <smali>com/android/camera</smali>
     <smali>com/tencent/mm</smali>
+    <smali>com/tencent/mm/sdk</smali>
     <smali>com/sina/weibo</smali>
+    <smali>com/sina/weibo/sdk</smali>
     <smali>com/etao/kakalib</smali>
+    <smali>com/etao/kakalib/views</smali>
+    <smali>com/etao/kakalib/express</smali>
     <smali>com/etao/kaka</smali>
+    <smali>com/etao/kaka/decode</smali>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>com/opera/android</smali>
+    <smali>com/opera/android/savedpages</smali>
+    <smali>com/opera/android/light</smali>
+    <smali>com/opera/android/crashhandler</smali>
+    <smali>com/opera/android/op</smali>
+    <smali>com/opera/android/splash</smali>
+    <smali>com/opera/android/actionbar</smali>
+    <smali>com/opera/android/search</smali>
+    <smali>com/opera/android/nightmode</smali>
+    <smali>com/opera/android/browser</smali>
+    <smali>com/opera/android/invitation</smali>
+    <smali>com/opera/android/custom_views</smali>
+    <smali>com/opera/android/bookmarkhistory</smali>
+    <smali>com/opera/android/settings</smali>
+    <smali>com/opera/android/speeddialfarm</smali>
+    <smali>com/opera/android/marketing</smali>
+    <smali>com/opera/android/leftscreen</smali>
+    <smali>com/opera/android/barcode</smali>
+    <smali>com/opera/android/mop</smali>
+    <smali>com/opera/android/downloads</smali>
+    <smali>com/opera/android/turbo</smali>
+    <smali>com/opera/android/favorites</smali>
+    <smali>com/opera/android/pushsdk</smali>
+    <smali>com/opera/android/ongoing</smali>
+    <smali>com/opera/android/lzma_sdk</smali>
+    <smali>com/opera/android/ime</smali>
+    <smali>com/opera/android/utilities</smali>
+    <smali>com/opera/android/startpage</smali>
+    <smali>com/opera/android/history</smali>
+    <smali>com/opera/android/cnm</smali>
+    <smali>com/opera/android/bookmarks</smali>
+    <smali>com/opera/android/pushednotification</smali>
+    <smali>com/opera/android/compressionstats</smali>
     <smali>com/opera/base</smali>
     <asset>oupeng.properties</asset>
     <asset>opera.pak</asset>
@@ -1295,6 +1498,7 @@
     <chromium>org/chromium/base</chromium>
     <chromium>org/chromium/base/library_loader</chromium>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <asset>index.html</asset>
@@ -1306,10 +1510,11 @@
     <asset>COPYING</asset>
   </apk>
   <apk id="com.example.hello">
-    <crosswalk iscrosswalk="" mode="" architecture="" webview="yes" chromium="" coreinternal="" cordova="yes" intelxdk="" note="Not a crosswalk based app."/>
+    <crosswalk iscrosswalk="" mode="" architecture="" webview="yes" chromium="" coreinternal="" cordova="yes" intelxdk="" note="Not a Crosswalk based app."/>
     <app name="upstreamdova" file="cordova_upstream-debug-unaligned.apk" size="1.9MB" launchableactivity="com.example.hello.CordovaApp" versioncode="1" versionname="0.0.1" sdkversion="10" targetsdkversion="19"/>
     <cordova>org/apache/cordova</cordova>
     <smali>com/squareup/okhttp</smali>
+    <smali>com/squareup/okhttp/internal</smali>
     <smali>com/example/hello</smali>
     <asset>_where-is-www.txt</asset>
     <asset>index.html</asset>
@@ -1379,7 +1584,9 @@
     <cordova>org/apache/cordova/test</cordova>
     <cordova>org/apache/cordova/media</cordova>
     <smali>com/squareup/okhttp</smali>
+    <smali>com/squareup/okhttp/internal</smali>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <smali>org/apache/mobilespec</smali>
@@ -1934,38 +2141,6 @@
     <asset>sublist.js</asset>
     <asset>bootstrap.min.js</asset>
   </apk>
-  <apk id="org.xwalk.core.xwview.test">
-    <crosswalk iscrosswalk="" mode="" architecture="" webview="" chromium="yes" coreinternal="" cordova="" intelxdk="" note="Not a crosswalk based app."/>
-    <app name="" file="XWalkCoreTest.apk" size="0.1MB" launchableactivity="" versioncode="1" versionname="Developer Build" sdkversion="14" targetsdkversion="21"/>
-    <xwalk>org/xwalk</xwalk>
-    <xwalk>org/xwalk/core</xwalk>
-    <xwalk>org/xwalk/core/xwview</xwalk>
-    <xwalk>org/xwalk/core/xwview/test</xwalk>
-    <xwalk>org/xwalk/core/xwview/test/util</xwalk>
-    <chromium>org/chromium/content</chromium>
-    <chromium>org/chromium/content/browser</chromium>
-    <chromium>org/chromium/net</chromium>
-    <chromium>org/chromium/net/test</chromium>
-    <chromium>org/chromium/base</chromium>
-    <chromium>org/chromium/base/test</chromium>
-    <asset>file_chooser.html</asset>
-    <asset>index.html</asset>
-    <asset>framesEcho.html</asset>
-    <asset>fullscreen_enter_exit.html</asset>
-    <asset>new_window.html</asset>
-    <asset>fullscreen_togged.html</asset>
-    <asset>add_js_interface.html</asset>
-    <asset>profile.html</asset>
-    <asset>console_message.html</asset>
-    <asset>window.close.html</asset>
-    <asset>echo.html</asset>
-    <asset>create_window_2.html</asset>
-    <asset>favicon.html</asset>
-    <asset>scale_changed.html</asset>
-    <asset>create_window_1.html</asset>
-    <asset>js_modal_dialog.html</asset>
-    <asset>echoSync.html</asset>
-  </apk>
   <apk id="org.xwalk.test">
     <crosswalk iscrosswalk="yes" mode="embedded" architecture="arm" webview="" chromium="yes" coreinternal="yes" cordova="" intelxdk="" note=""/>
     <app name="关于百度" file="Test_0.0.1_arm_embedded.apk" size="19.0MB" launchableactivity="org.xwalk.test.TestActivity" versioncode="20000001" versionname="0.0.1" sdkversion="14" targetsdkversion="21"/>
@@ -2012,6 +2187,7 @@
     <chromium>org/chromium/base</chromium>
     <chromium>org/chromium/base/library_loader</chromium>
     <smali>com/googlecode/eyesfree</smali>
+    <smali>com/googlecode/eyesfree/braille</smali>
     <smali>javax/annotation/meta</smali>
     <smali>javax/annotation/concurrent</smali>
     <asset>dropdown.html</asset>
@@ -2020,7 +2196,7 @@
     <asset>manifest.json</asset>
   </apk>
   <apk id="org.xwalk.core.internal.xwview.test">
-    <crosswalk iscrosswalk="" mode="" architecture="" webview="" chromium="yes" coreinternal="" cordova="" intelxdk="" note="Namespace org.xwalk.core.internal included."/>
+    <crosswalk iscrosswalk="" mode="" architecture="" webview="" chromium="yes" coreinternal="yes" cordova="" intelxdk="" note="Not a Crosswalk based app."/>
     <app name="" file="XWalkCoreInternalTest.apk" size="0.1MB" launchableactivity="" versioncode="1" versionname="Developer Build" sdkversion="14" targetsdkversion="21"/>
     <xwalk>org/xwalk</xwalk>
     <xwalk>org/xwalk/core</xwalk>
