@@ -1,0 +1,105 @@
+#A Script to Summarize APK Size from https://docs.google.com/a/intel.com/document/d/1aC64nJZ4nKeah-KwsGuAAf2vDApYhkPPhdz2km3zlrg/edit#heading=h.vr8r5nls2g6d
+
+#!/bin/bash
+
+if [ $# -ne 1 -o "$1" == "-h" -o "$1" == "--help" ]; then
+    echo "usage: apksize.sh /path/to/file.apk"
+    exit 1
+fi
+
+APK=$1
+
+if [ ! -e $APK ]; then
+    echo "$APK does not exist"
+    exit 1
+fi 
+
+if [ ! -r $APK ]; then
+    echo "$APK is not readable"
+    exit 1
+fi 
+
+echo    "APK: $APK"
+
+function apk_size {
+    zipinfo -l ${APK} | tail -n+3 | head -n-1 | grep $2 "${1}" | cut -c 32-40 | awk '{s+=$1}END{print s}'
+}
+function apk_file_count {
+    zipinfo -l ${APK} | tail -n+3 | head -n-1 | grep $2 "${1}" | wc -l
+}
+function apk_report {
+    size=$(apk_size $*)
+    count=$(apk_file_count $*)
+    if [ $count -lt 5 ]; then
+        file_names=$(zipinfo -l ${APK} | tail -n+3 | head -n-1 | grep $2 "${1}" | grep -oE '[^ ]+$' | awk '{ printf "%s, ", $0 }' | sed 's/..$//')
+        addendum=" ($file_names)"
+    else
+        addendum=""
+    fi
+    echo "$size bytes in $count files$addendum"
+}
+
+csv=""
+echo ""
+echo    "Stats for files as they exist within the APK:"
+echo -n "*.arsc:       " && apk_report '.arsc$' && csv="arsc,${size},${count}"
+echo -n "*.dex:        " && apk_report '.dex$' && csv="${csv}\ndex,${size},${count}"
+echo -n "*.pak:        " && apk_report '.pak$' && csv="${csv}\npak,${size},${count}"
+echo -n "*.dat:        " && apk_report '.dat$' && csv="${csv}\ndat,${size},${count}"
+echo -n "*.png:        " && apk_report '.png$' && csv="${csv}\npng,${size},${count}"
+echo -n "*.so:         " && apk_report '.so$' && csv="${csv}\nso,${size},${count}"
+echo -n "*.xml:        " && apk_report '.xml$' && csv="${csv}\nxml,${size},${count}"
+echo -n "Other:        " && apk_report '(\.png|\.xml|\.pak|\.dat|\.arsc|\.dex|\.so)$' '-vE'
+echo    "----------------------"
+echo -n "All files:    " && apk_report '.\\*'
+
+apk_all_files_size=$(apk_size '.\\*')
+apk_size_on_disk=$(du -b $APK  | cut -f1)
+echo    "APK size:     $apk_size_on_disk bytes"
+
+apk_overhead=$(expr $apk_size_on_disk - $apk_all_files_size)
+csv="${csv}\napk overhead,${apk_overhead},0"
+echo    "APK overhead: $apk_overhead bytes"
+echo    "CSV Report (resource type, number of bytes, number of files):"
+echo -e "${csv}"
+
+# And now, uncompressed size...
+TMP=/tmp/apksize
+rm -rf $TMP
+mkdir -p $TMP
+unzip -qq -d $TMP $APK
+function uncomp_size {
+    find $TMP -type f | xargs ls -al | grep $2 "${1}" | tr -s ' ' ' ' | cut -d ' ' -f 5 | awk '{s+=$1}END{print s}'
+}
+function uncomp_file_count {
+    find $TMP -type f | xargs ls -al | grep $2 "${1}" | wc -l
+}
+function uncomp_report {
+    size=$(uncomp_size $*)
+    count=$(uncomp_file_count $*)
+    if [ $count -lt 5 ]; then
+        file_names=$(find $TMP -type f | xargs ls -al | grep $2 "${1}" | grep -oE '[^ ]+$' | awk '{ printf "%s, ", $0 }' | sed 's/..$//' | sed 's,/tmp/apksize/,,g')
+        addendum=" ($file_names)"
+    else
+        addendum=""
+    fi
+    echo "$size bytes in $count files$addendum"
+}
+
+csv=""
+echo ""
+echo    "Stats for files when extracted from the APK:"
+echo -n "*.arsc:       " && uncomp_report '.arsc$' && csv="arsc,${size},${count}"
+echo -n "*.dex:        " && uncomp_report '.dex$' && csv="${csv}\ndex,${size},${count}"
+echo -n "*.pak:        " && uncomp_report '.pak$' && csv="${csv}\npak,${size},${count}"
+echo -n "*.dat:        " && uncomp_report '.dat$' && csv="${csv}\ndat,${size},${count}"
+echo -n "*.png:        " && uncomp_report '.png$' && csv="${csv}\npng,${size},${count}"
+echo -n "*.so:         " && uncomp_report '.so$' && csv="${csv}\nso,${size},${count}"
+echo -n "*.xml:        " && uncomp_report '.xml$' && csv="${csv}\nxml,${size},${count}"
+echo -n "Other:        " && uncomp_report '(\.png|\.xml|\.pak|\.dat|\.arsc|\.dex|\.so)$' '-vE'
+echo    "----------------------"
+echo -n "All files:    " && uncomp_report '.\\*'
+echo    "CSV Report (resource type, number of bytes, number of files):"
+echo -e "${csv}"
+
+rm -rf $TMP
