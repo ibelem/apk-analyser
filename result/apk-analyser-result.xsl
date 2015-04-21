@@ -183,7 +183,7 @@
           </xsl:for-each>
         </tr>
         <tr>
-          <td colspan='12' class='details'>
+          <td colspan='13' class='details'>
             <div class='apd'>
               Package: <span class="det"><xsl:value-of select="@id"/></span>
               <xsl:for-each select="app">
