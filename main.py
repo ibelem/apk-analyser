@@ -178,7 +178,8 @@ def apktoolanalyser(path):
             if comm.find_file(xwalkwebviewengine):
                 xwalkwebvieweg = 'yes'
             if comm.find_file(xwalkwebviewplugin): 
-                xwalkwebvieweg = getxwalkwebviewplugin(xwalkwebviewplugin)
+                if getxwalkwebviewplugin(xwalkwebviewplugin):
+                    xwalkwebvieweg = getxwalkwebviewplugin(xwalkwebviewplugin)
 
             if crosswalk != 'yes':
                 for root, dir, files in os.walk(smalipath):
