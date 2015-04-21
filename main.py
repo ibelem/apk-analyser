@@ -1,7 +1,35 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Author: belem
+# Copyright (C) 2015 Intel Corporation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+#   * Redistributions of source code must retain the above copyright
+#     notice, this list of conditions and the following disclaimer.
+#   * Redistributions in binary form must reproduce the above copyright
+#     notice, this list of conditions and the following disclaimer in
+#     the documentation and/or other materials provided with the
+#     distribution.
+#   * Neither the name of Intel Corporation nor the names of its
+#     contributors may be used to endorse or promote products derived
+#     from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Author: belem.zhang@intel.com
 
 import os, sys
 import shutil
@@ -77,6 +105,23 @@ def aaptanalyser(path):
         print ex
         return ['']
 
+
+def getxwalkwebviewplugin(path):
+    if comm.find_file(path):
+        f1 = file(path, mode='r')
+        line = f1.readline()
+        linen = 1
+        xversion = ''
+        while line:
+            if line.find('cordova-plugin-crosswalk-webview') > -1:
+                xversion = line.replace('cordova-plugin-crosswalk-webview','').replace('"','').replace(':','').strip()
+            linen +=1
+            line = f1.readline()
+        f1.close()
+        return xversion
+    else:
+        return ''
+
 def apktoolanalyser(path):
 
     apkname = path.split('/')[-1]
@@ -91,6 +136,8 @@ def apktoolanalyser(path):
     xwalkcoreinternal = os.path.join(apkdedecompiled, 'smali', 'org', 'xwalk', 'core', 'internal')
     intelxdk = os.path.join(apkdedecompiled, 'smali', 'com', 'intel', 'xdk')
     intelxdkjs = os.path.join(apkdedecompiled, 'assets', 'www', 'intelxdk.js')
+    xwalkwebviewengine = os.path.join(apkdedecompiled, 'smali', 'org', 'crosswalk', 'engine', 'XWalkWebViewEngine.smali')
+    xwalkwebviewplugin = os.path.join(apkdedecompiled, 'assets', 'www', 'cordova_plugins.js')
 
     mode = ''
     crosswalk = ''
@@ -100,6 +147,7 @@ def apktoolanalyser(path):
     webview = ''
     chromium = ''
     note = ''
+    xwalkwebvieweg = ''
     xwalklist = []
     cordovalist = []
     chromiumlist = []
@@ -126,6 +174,11 @@ def apktoolanalyser(path):
 
             if comm.find_dir(apachecordova):
                 cordova = 'yes'
+
+            if comm.find_file(xwalkwebviewengine):
+                xwalkwebvieweg = 'yes'
+            if comm.find_file(xwalkwebviewplugin): 
+                xwalkwebvieweg = getxwalkwebviewplugin(xwalkwebviewplugin)
 
             if crosswalk != 'yes':
                 for root, dir, files in os.walk(smalipath):
@@ -168,11 +221,11 @@ def apktoolanalyser(path):
             print 'Decompile failed: ' + apkname
         shutil.rmtree(apkdedecompiled)
 
-        return [crosswalk, mode, webview, chromium, coreinternal, cordova, isintelxdk, note, xwalklist, chromiumlist, cordovalist, smalilist, assetlist]
+        return [crosswalk, mode, webview, chromium, coreinternal, cordova, xwalkwebvieweg, isintelxdk, note, xwalklist, chromiumlist, cordovalist, smalilist, assetlist]
 
     except Exception, ex:
         print ex
-        return ['','', '','','','','','',[],[],[],[],[]]
+        return ['','', '','','','','','', '',[],[],[],[],[]]
 
 def apksize(path):
     asize = '{0:.1f}{1}'.format(os.path.getsize(path)/1000.0/1000.0, 'MB')
@@ -199,20 +252,21 @@ def analyser(path):
     chromium = k[3]
     coreinternal = k[4]
     cordova = k[5]
-    isintelxdk = k[6]
-    note = k[7]
-    xwalklist = k[8]
-    chromiumlist = k[9]
-    cordovalist = k[10]
-    smalilist = k[11]
-    assetlist = k[12]
+    xwalkwebvieweg = k[6]
+    isintelxdk = k[7]
+    note = k[8]
+    xwalklist = k[9]
+    chromiumlist = k[10]
+    cordovalist = k[11]
+    smalilist = k[12]
+    assetlist = k[13]
 
     filename = path.split('\\')[-1].split('/')[-1]
 
     xml.insert_xml_result(xmlpath, filename, apksize(path), appname, packagename,
                           launchableactivity, versioncode, versionname, sdkversion, targetsdkversion,
                           mode, architecture,
-                          crosswalk, webview, chromium, coreinternal, cordova, isintelxdk, xwalklist, chromiumlist, cordovalist, smalilist, assetlist, note)
+                          crosswalk, webview, chromium, coreinternal, cordova, xwalkwebvieweg, isintelxdk, xwalklist, chromiumlist, cordovalist, smalilist, assetlist, note)
     print 'Completed: ' + path
     print '__________________________________________'
 
