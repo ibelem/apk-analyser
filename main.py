@@ -91,14 +91,26 @@ def aaptanalyser(path):
         aaptlist = 'aapt list -a ' + path
         r = subprocess.check_output(aaptlist, shell=True)
 
-        if (r.find('lib/armeabi-v7a/libxwalkcore.so') >-1 or r.find('lib/armeabi/libxwalkcore.so') >-1) and r.find('lib/x86/libxwalkcore.so') >-1:
+        if r.find('lib/arm64-v8a/libxwalkcore.so') >-1 \
+            and (r.find('lib/x86_64/libxwalkcore.so') >-1 or r.find('lib/x86-64/libxwalkcore.so') >-1)\
+            and (r.find('lib/armeabi-v7a/libxwalkcore.so') >-1 or r.find('lib/armeabi/libxwalkcore.so') >-1) \
+            and r.find('lib/x86/libxwalkcore.so') >-1:
+            architecture = 'arm64 + x86_64 + arm + x86'
+        elif r.find('lib/arm64-v8a/libxwalkcore.so') >-1 \
+            and (r.find('lib/x86_64/libxwalkcore.so') >-1 or r.find('lib/x86-64/libxwalkcore.so') >-1):
+            architecture = 'arm64 + x86_64'
+        elif r.find('lib/arm64-v8a/libxwalkcore.so') >-1:
+            architecture = 'arm64'
+        elif r.find('lib/x86_64/libxwalkcore.so') >-1 or r.find('lib/x86-64/libxwalkcore.so') >-1:
+            architecture = 'x86_64'
+        elif (r.find('lib/armeabi-v7a/libxwalkcore.so') >-1 or r.find('lib/armeabi/libxwalkcore.so') >-1) \
+            and r.find('lib/x86/libxwalkcore.so') >-1:
             architecture = 'arm + x86'
-        elif r.find('lib/armeabi-v7a/libxwalkcore.so') >-1 or r.find('lib/armeabi/libxwalkcore.so') >-1:
-            print 'arm'
-            architecture = 'arm'
         elif r.find('lib/x86/libxwalkcore.so') >-1:
-            print 'x86'
             architecture = 'x86'
+        elif r.find('lib/armeabi-v7a/libxwalkcore.so') >-1 or r.find('lib/armeabi/libxwalkcore.so') >-1:
+            architecture = 'arm'
+        print architecture
         return [architecture]
 
     except Exception, ex:
@@ -126,6 +138,9 @@ def apktoolanalyser(path):
     embeddedpatharm = os.path.join(apkdedecompiled, 'lib', 'armeabi-v7a', 'libxwalkcore.so')
     embeddedpatharmv5 = os.path.join(apkdedecompiled, 'lib', 'armeabi', 'libxwalkcore.so')
     embeddedpathx86 = os.path.join(apkdedecompiled, 'lib', 'x86', 'libxwalkcore.so')
+    embeddedpatharm64 = os.path.join(apkdedecompiled, 'lib', 'arm64-v8a', 'libxwalkcore.so')
+    embeddedpathx86_64 = os.path.join(apkdedecompiled, 'lib', 'x86_64', 'libxwalkcore.so')
+    embeddedpathx86_64_ = os.path.join(apkdedecompiled, 'lib', 'x86-64', 'libxwalkcore.so')
 
     xwalkcoreviewsmali = os.path.join(apkdedecompiled, 'smali', 'org', 'xwalk', 'core', 'XWalkView.smali')
     apachecordova = os.path.join(apkdedecompiled, 'smali', 'org', 'apache', 'cordova')
@@ -156,7 +171,9 @@ def apktoolanalyser(path):
         t = subprocess.check_output(apktoolcmd, shell=True)
         if comm.find_dir(apkdedecompiled):
 
-            if comm.find_file(embeddedpatharm) > -1 or comm.find_file(embeddedpatharmv5) > -1 or comm.find_file(embeddedpathx86) > -1:
+            if comm.find_file(embeddedpatharm) > -1 or comm.find_file(embeddedpatharmv5) > -1 \
+                or comm.find_file(embeddedpathx86) > -1 or comm.find_file(embeddedpatharm64) > -1\
+                or comm.find_file(embeddedpathx86_64) > -1 or comm.find_file(embeddedpathx86_64_) > -1:
                 mode = 'embedded'
             elif comm.find_file(xwalkcoreviewsmali):
                 mode = 'shared'
