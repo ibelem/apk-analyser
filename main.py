@@ -18,7 +18,7 @@ xmlpath = reportpath + '/apk-analyser-result_' + \
 
 def aaptdump(path):
     try:
-        aaptdump = 'aapt d badging ' + path + ' AndroidManifest.xml'
+        aaptdump = 'aapt d badging "' + path + '" AndroidManifest.xml'
         content = subprocess.check_output(aaptdump, shell=True)
 
         appname = ''
@@ -73,7 +73,7 @@ def aaptdump(path):
 def aaptanalyser(path):
     architecture = ''
     try:
-        aaptlist = 'aapt list -a ' + path
+        aaptlist = 'aapt list -a "' + path + '"'
         r = subprocess.check_output(aaptlist, shell=True)
 
         if r.find('lib/arm64-v8a/libxwalkcore.so') > -1 \
@@ -209,7 +209,7 @@ def apktoolanalyser(path):
     assetlist = []
 
     try:
-        apktoolcmd = 'apktool d -f ' + path
+        apktoolcmd = 'apktool d -f "' + path + '"'
         t = subprocess.check_output(apktoolcmd, shell=True)
         if comm.find_dir(apkdedecompiled):
 
