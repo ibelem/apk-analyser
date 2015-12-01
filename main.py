@@ -223,7 +223,8 @@ def apktoolanalyser(path):
             if comm.find_file(xwalkcoreviewsmali):
                 crosswalk = 'yes'
             else:
-                note = 'Not a Crosswalk based app.'
+                #note = 'Not a Crosswalk based app.'
+                note = ''
 
             if comm.find_dir(xwalkcoreinternal):
                 coreinternal = 'yes'
