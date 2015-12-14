@@ -6,7 +6,7 @@
 
 <html>
   <head>
-    <title>Crosswalk APK Analysed Result</title>
+    <title>Crosswalk APK Analyzer Report</title>
     <meta charset='utf-8'/>
     <meta http-equiv='X-UA-Compatible' content='IE=10' />
     <meta name='author' content='Belem, belem.zhang@intel.com' />
@@ -31,8 +31,9 @@
       .apd { text-align: center;  margin: 10px 0px; }
       .details { padding: 10px; font-size:11px; }
       .fill {background-color: #46C8C8; color: rgba(255, 255, 255, 1.0); }
-      .lim { min-width: 100px; max-width: 180px; overflow: hidden; }
-      .limname { max-width: 120px; overflow: hidden;  }
+      .limnum { text-align: left; width: 35px;}
+      .lim { text-align: left; min-width: 100px; max-width: 180px; overflow: hidden; }
+      .limname { text-align: left; max-width: 120px; overflow: hidden;  }
       .limsize { min-width: 42px; max-width: 80px; overflow: hidden;  }
       .limw { min-width: 60px; max-width: 96px; overflow: hidden; width: 106px;  }
       .emb { background-color:#00B1E1; color: rgba(255, 255, 255, 1.0); text-shadow: 0px 1px 0px rgba(0,0,0,0.2);}
@@ -60,10 +61,12 @@
   </head>
   <body>
     <div id='wrapper'>
-      <header>Crosswalk APK Analysed Result</header>
+      <header>Crosswalk APK Analyzer Report</header>
+      <div>Total APKs: <xsl:value-of select="count(apks/apk)"/></div>
       <div id='toggle'>expand all</div>
       <table class="reports">
         <tr>
+          <th class="limnum"></th>
           <th class="lim">APK</th>
           <th class="limname">Name</th>
           <th class="limsize">Size</th>
@@ -82,8 +85,10 @@
         <xsl:for-each select="apks/apk">
         <xsl:sort select="app/@file"/>
         <xsl:variable name="pkgid"><xsl:value-of select="@id"/></xsl:variable>
+        <xsl:variable name="num"><xsl:value-of select="position()" /></xsl:variable>
         <tr title="{$pkgid}">
           <xsl:for-each select="app">
+          <td class="limnum"><xsl:value-of select="$num"/></td>
           <td class="lim"><xsl:value-of select="@file"/></td>
           <td class="limname"><xsl:value-of select="@name"/></td>
           <td><xsl:value-of select="@size"/></td>
