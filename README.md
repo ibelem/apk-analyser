@@ -28,7 +28,7 @@ C.
 	
 # Review Results
 * Get results in `<pathto>/apk-analyser/result` folder.
-* If run the third method, please copy "`apk-analyser/result/apk-analyser-result.xsl`" to `<current dir>/result` folder.
+* If run the third method, copy "`apk-analyser/result/apk-analyser-result.xsl`" to `<current dir>/result` folder.
 * Launch local `apk-analyser-result_<date>_<time>.xml` by Firefox or IE. For Google Chrome`[1]`, need to access `.xml` and `.xsl` via url on web server.
 
 `[1]` Google Chrome is unable to perform an xsl transform on a local xml file due to a security concern that blocking XML files from accessing local XSLT files in the same directory.
